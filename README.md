@@ -1,6 +1,6 @@
 # CBArray
 A (very crude) Netbeans/Java work in progress to develop fonts for SSD1780/SSD1306
-displays, currently being used on displays connected to ESP8266.
+displays, currently being used on displays connected to ESP8266 (ESP-09).
 
 Mostly working, but only [Next] button detects changes.
 
