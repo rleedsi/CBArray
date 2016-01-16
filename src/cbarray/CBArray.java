@@ -3,6 +3,35 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+//==================================================================================
+// File: CBArray.java
+//
+// Description: Tool for assisting in font development for SSD1780/SSD1306 displays
+//
+//              Presents a matrix of checkboxes (defined by 'rows' and 'cols' below
+//              Displays values such that each value presented is the hex encoded
+//              value of the columns, bottom to top and left to right. These will be
+//              the values necessary for displaying the character designed on one of
+//              the above displays.
+//
+// History:
+// 2015Nov26 Created & began development -- RL
+// 2015Dec02 Functionally working; still needs display management cleanup (layout
+//           changes with encoded value output) -- RL
+// 2015Dec05 Fixed layout working -- RL
+// 2015Dec10 Comment line detection working -- RL
+// 2015Dec13 Integrating state machine testing completed separately -- RL
+// 2015Dec16 Snapshot - reading file correctly, save dialog in progress (copy button
+//           implemented) -- RL
+// 2015Dec17 Implemented Record #, delRec(), insRec() (insRec without copy crashes) -- RL
+// 2015Dec19 Add headers -- RL
+// 2015Dec20 Mostly working for 16x16; records only saved on nextRec(); works on
+//           32x32 (change CharSize.java) - must also change bit mask in displayRec()
+//           to reflect cell width. ESP8266 does not seem to want to work with
+//           pgm_read_word, so rebuilding output to only save series of 8 bit
+//           values. Saving before starting that effort as
+//           CBArrayMostlyWorking2015Dec20.java -- RL
+//==================================================================================
 package cbarray;
 import java.io.*;
 import java.io.FileReader;
